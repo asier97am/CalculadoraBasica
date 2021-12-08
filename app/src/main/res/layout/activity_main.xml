@@ -10,7 +10,7 @@
     <EditText
         android:id="@+id/primerValor"
         android:layout_width="200dp"
-        android:layout_height="48dp"
+        android:layout_height="49dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="38dp"
         android:hint="Primer valor"
