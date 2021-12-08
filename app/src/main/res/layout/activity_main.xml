@@ -10,13 +10,14 @@
     <EditText
         android:id="@+id/primerValor"
         android:layout_width="200dp"
-        android:layout_height="0dp"
+        android:layout_height="48dp"
         android:layout_marginStart="34dp"
         android:layout_marginTop="38dp"
         android:hint="Primer valor"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 
     <EditText
@@ -25,15 +26,17 @@
         android:layout_height="50dp"
         android:layout_marginTop="19dp"
         android:hint="Segundo valor"
+
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="@+id/primerValor"
-        app:layout_constraintTop_toBottomOf="@+id/primerValor" />
+        app:layout_constraintTop_toBottomOf="@+id/primerValor"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/txtResultado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="88dp"
         android:text="Resultado"
         android:textColor="@color/red"
         android:textSize="20dp"
@@ -92,7 +95,7 @@
         android:layout_marginStart="1dp"
         android:layout_marginTop="19dp"
         android:text="reset"
-        android:textSize="12dp"
+        android:textSize="12sp"
         app:layout_constraintStart_toStartOf="@+id/btndivision"
         app:layout_constraintTop_toBottomOf="@+id/btndivision" />
 

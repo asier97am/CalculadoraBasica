@@ -10,13 +10,8 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public Button btnsuma;
-    public Button btnresta;
-    public Button btnmultiplicacion;
-    public Button btndivision;
-    public Button btnreset;
-    public EditText primerValor;
-    public EditText segundoValor;
+    public Button btnsuma,btnresta ,btnmultiplicacion ,btndivision, btnreset;
+    public EditText primerValor,segundoValor;
     public TextView txtResultado;
 
     @Override
@@ -36,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         btnreset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                primerValor.setText(" ");
-                segundoValor.setText(" ");
+                primerValor.setText("");
+                segundoValor.setText("");
                 txtResultado.setText("Resultado");
             }
         });
@@ -48,12 +43,15 @@ public class MainActivity extends AppCompatActivity {
                 double n1 ;
                 double n2 ;
                 double suma ;
+                try {
+                    n1 = Double.parseDouble(primerValor.getText().toString());
+                    n2 = Double.parseDouble(segundoValor.getText().toString());
+                    suma = n1 + n2;
 
-                n1 =Double.parseDouble(primerValor.getText().toString());
-                n2 =Double.parseDouble(segundoValor.getText().toString());
-                suma=n1+n2;
-
-                txtResultado.setText(String.valueOf(suma));
+                    txtResultado.setText(String.valueOf(suma));
+                } catch (java.lang.NumberFormatException ex) {
+                    txtResultado.setText("Resultado: ¡Operador inválido!");
+                }
             }
         });
 
@@ -63,12 +61,16 @@ public class MainActivity extends AppCompatActivity {
                 double n1 ;
                 double n2 ;
                 double resta;
-
+                try {
                 n1 =Double.parseDouble(primerValor.getText().toString());
                 n2 =Double.parseDouble(segundoValor.getText().toString());
                 resta=n1-n2;
 
                 txtResultado.setText(String.valueOf(resta));
+
+                } catch (java.lang.NumberFormatException ex) {
+                    txtResultado.setText("Resultado: ¡Operador inválido!");
+                }
             }
         });
 
@@ -78,12 +80,15 @@ public class MainActivity extends AppCompatActivity {
                 double n1 ;
                 double n2 ;
                 double multiplicacion ;
-
+                try{
                 n1 =Double.parseDouble(primerValor.getText().toString());
                 n2 =Double.parseDouble(segundoValor.getText().toString());
                 multiplicacion=n1*n2;
 
                 txtResultado.setText(String.valueOf(multiplicacion));
+            } catch (java.lang.NumberFormatException ex) {
+                txtResultado.setText("Resultado: ¡Operador inválido!");
+            }
             }
         });
 
@@ -93,12 +98,15 @@ public class MainActivity extends AppCompatActivity {
                 double n1 ;
                 double n2 ;
                 double division ;
-
+                try{
                 n1 =Double.parseDouble(primerValor.getText().toString());
                 n2 =Double.parseDouble(segundoValor.getText().toString());
                 division=n1/n2;
 
                 txtResultado.setText(String.valueOf(division));
+        } catch (java.lang.NumberFormatException ex) {
+            txtResultado.setText("Resultado: ¡Operador inválido!");
+        }
             }
         });
 
