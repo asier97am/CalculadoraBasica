@@ -80,7 +80,7 @@
     <Button
         android:id="@+id/btndivision"
         android:layout_width="150dp"
-        android:layout_height="50dp"
+        android:layout_height="51dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="19dp"
         android:text="DIVIDIR"
